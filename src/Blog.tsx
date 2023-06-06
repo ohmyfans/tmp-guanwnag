@@ -30,11 +30,12 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: '让你的每天都有更多的价值',
+  title: 'Title of a longer featured blog post',
   description:
-    '每天都是一份珍贵的礼物，我们应该珍惜每一天，并让它变得更有价值。为了让每天更有意义，我们可以充分利用时间，学习新知识，提高技能，或者帮助他人。我们可以制定计划，设置目标，追求自己的梦想，让每一天都更加充实和有意义。',
+    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
   image: 'https://source.unsplash.com/random',
   imageText: 'main image description',
+  linkText: 'Continue reading…',
 };
 
 const featuredPosts = [
@@ -75,7 +76,6 @@ const sidebar = {
     { title: 'May 1999', url: '#' },
     { title: 'April 1999', url: '#' },
   ],
-  social: [],
 };
 
 const theme = createTheme();
@@ -85,7 +85,7 @@ export default function Blog() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="甘文崔科技" sections={sections} />
+        <Header title="Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -104,7 +104,10 @@ export default function Blog() {
           </Grid>
         </main>
       </Container>
-      <Footer />
+      <Footer
+        title="Footer"
+        description="Something here to give the footer a purpose!"
+      />
     </ThemeProvider>
   );
 }
